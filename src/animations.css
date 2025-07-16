@@ -1,0 +1,176 @@
+/* animations.css */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fade-in-up {
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+/* Add staggered animation for list items */
+.staggered-list > * {
+  animation: fadeInUp 0.5s both;
+}
+
+.staggered-list > *:nth-child(1) { animation-delay: 0.1s; }
+.staggered-list > *:nth-child(2) { animation-delay: 0.2s; }
+.staggered-list > *:nth-child(3) { animation-delay: 0.3s; }
+.staggered-list > *:nth-child(4) { animation-delay: 0.4s; }
+.staggered-list > *:nth-child(5) { animation-delay: 0.5s; }
+.staggered-list > *:nth-child(6) { animation-delay: 0.6s; }
+.staggered-list > *:nth-child(7) { animation-delay: 0.7s; }
+.staggered-list > *:nth-child(8) { animation-delay: 0.8s; }
+.staggered-list > *:nth-child(9) { animation-delay: 0.9s; }
+.staggered-list > *:nth-child(10) { animation-delay: 1.0s; }
+
+/* === Animations & Effects for Neo-Luxe Minimalism === */
+
+:root {
+  scroll-behavior: smooth;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes neon-border {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-cyan); }
+  50% { box-shadow: 0 0 16px 4px var(--accent-cyan); }
+}
+
+@keyframes planet-orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes hologram-hint {
+  0%, 100% { filter: drop-shadow(0 0 8px var(--accent-coral)); }
+  50% { filter: drop-shadow(0 0 24px var(--accent-cyan)); }
+}
+
+@keyframes liquid-metal {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes parallax-img {
+  0% { transform: scale(1.05) translateY(-8px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+html, body {
+  cursor: auto;
+}
+
+.interactive {
+  cursor: pointer;
+}
+
+/* Smooth scroll for all pages */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade effect for page transitions */
+.page-fade-enter {
+  animation: fade-in 0.7s cubic-bezier(.4,0,.2,1);
+}
+.page-fade-exit {
+  animation: fade-out 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+/* Hologram hint for icons */
+.hologram-hint {
+  animation: hologram-hint 2s infinite;
+}
+
+/* Parallax effect for images */
+.parallax-img {
+  will-change: transform;
+  transition: transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.parallax-img:hover {
+  animation: parallax-img 1.2s cubic-bezier(.4,0,.2,1) alternate;
+}
+
+/* Neon border for cards */
+.neon-border {
+  border: 2px solid var(--accent-cyan);
+  box-shadow: 0 0 12px 0 var(--accent-cyan);
+  transition: box-shadow 0.3s;
+}
+.neon-border:hover {
+  animation: neon-border 1.2s infinite alternate;
+}
+
+/* Liquid metal button effect */
+.liquid-metal-btn {
+  background: linear-gradient(90deg, var(--accent-cyan), var(--main-blue), var(--accent-cyan));
+  background-size: 200% 200%;
+  animation: liquid-metal 2.5s linear infinite;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px 0 var(--main-blue-20);
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+.liquid-metal-btn:hover {
+  box-shadow: 0 4px 32px 0 var(--accent-cyan-40);
+  transform: scale(1.04);
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(245, 247, 250, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  border: 1.5px solid rgba(10, 37, 64, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(10, 37, 64, 0.12);
+  transition: box-shadow 0.3s, border 0.3s;
+}
+.glass-card:hover {
+  border: 2px solid var(--accent-cyan);
+  box-shadow: 0 0 24px 0 var(--accent-cyan-40);
+}
+
+/* Planet orbit indicator */
+.planet-orbit {
+  animation: planet-orbit 6s linear infinite;
+}
+
+/* 3D scroll presentation (placeholder) */
+.scroll-3d {
+  perspective: 1200px;
+}
+.scroll-3d .card {
+  transition: transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.scroll-3d .card.in-view {
+  transform: rotateY(8deg) scale(1.04);
+}
+
+/* Comments for maintainability */
+/*
+- Use .glass-card for all object cards
+- Use .liquid-metal-btn for all CTA buttons
+- Use .neon-border for hover on cards
+- Use .parallax-img for images in cards
+- Use .hologram-hint for icon tooltips
+- Use .planet-orbit for nav indicator
+*/ 

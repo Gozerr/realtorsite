@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Глобальные стили для тем */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Стили для Ant Design компонентов в темной теме */
+[data-theme="dark"] .ant-card {
+  background-color: var(--card-background);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .ant-card-head {
+  background-color: var(--card-background);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .ant-card-head-title {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-card-body {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-menu {
+  background-color: var(--surface-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-menu-item {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-menu-item:hover {
+  background-color: var(--border-light);
+}
+
+[data-theme="dark"] .ant-menu-item-selected {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+[data-theme="dark"] .ant-input {
+  background-color: var(--surface-color);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-input:focus {
+  border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .ant-select-selector {
+  background-color: var(--surface-color);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-select-selection-item {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-modal-content {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-modal-header {
+  background-color: var(--card-background);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .ant-modal-title {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-divider {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .ant-alert {
+  background-color: var(--card-background);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .ant-alert-message {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-alert-description {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .ant-statistic-title {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-statistic-content {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-typography {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-btn {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .ant-btn-default {
+  background-color: var(--surface-color);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .ant-btn-default:hover {
+  background-color: var(--border-light);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .ant-popover-inner {
+  background-color: var(--card-background);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .ant-popover-arrow::before {
+  background-color: var(--card-background);
+}
+
+[data-theme="dark"] .ant-badge-count {
+  background-color: var(--error-color);
+}
+
+[data-theme="dark"] .ant-avatar {
+  background-color: var(--primary-color);
+}
+
+[data-theme="dark"] .ant-switch {
+  background-color: var(--border-color);
+}
+
+[data-theme="dark"] .ant-switch-checked {
+  background-color: var(--primary-color);
+}
+
+[data-theme="dark"] .ant-tag {
+  background-color: var(--border-light);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-carousel .slick-dots li button {
+  background-color: var(--text-muted);
+}
+
+[data-theme="dark"] .ant-carousel .slick-dots li.slick-active button {
+  background-color: var(--primary-color);
+}
+
+[data-theme="dark"] .ant-select-dropdown {
+  background-color: var(--card-background);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .ant-select-item {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-select-item-option-selected {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+[data-theme="dark"] .ant-select-item-option-active {
+  background-color: var(--border-light);
+}
+
+[data-theme="dark"] .ant-tooltip-inner {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-tooltip-arrow::before {
+  background-color: var(--card-background);
+}
+
+[data-theme="dark"] .ant-dropdown-menu {
+  background-color: var(--card-background);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .ant-dropdown-menu-item {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ant-dropdown-menu-item:hover {
+  background-color: var(--border-light);
+}
+
+[data-theme="dark"] .ant-message-notice-content {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+/* Классы для элементов обучения */
+.welcome-section {
+  /* Блок приветствия */
+}
+
+.dashboard-stats {
+  /* Статистические карточки */
+}
+
+.sidebar-properties {
+  /* Пункт сайдбара "Объекты недвижимости" */
+}
+
+.sidebar-clients {
+  /* Пункт сайдбара "Мои клиенты" */
+}
+
+.sidebar-selection {
+  /* Пункт сайдбара "Подбор" */
+}
+
+.sidebar-chats {
+  /* Пункт сайдбара "Чаты" */
+}
+
+.sidebar-notifications {
+  /* Пункт сайдбара "Уведомления" */
+}
+
+.sidebar-education {
+  /* Пункт сайдбара "Обучение" */
+}
+
+.sidebar-profile {
+  /* Пункт сайдбара "Мой профиль" */
+}
+
+.sidebar-settings {
+  /* Пункт сайдбара "Настройки" */
+}
+
+.header-search {
+  /* Поиск в header */
+}
+
+.theme-toggle {
+  /* Кнопка переключения темы */
+}

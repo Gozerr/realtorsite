@@ -1,0 +1,36 @@
+/* IconHint — голографическая подсказка для иконок */
+.iconHint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: var(--cursor-main);
+}
+.iconHint .hintIcon {
+  color: var(--accent-cyan);
+  filter: drop-shadow(0 0 8px var(--accent-cyan-40));
+  animation: hologram-hint 2s infinite;
+  font-size: 1.2em;
+}
+.iconHint .hintTooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--glass-bg);
+  color: var(--text-main);
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px 0 var(--main-blue-20);
+  font-size: 0.95em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 10;
+}
+.iconHint:hover .hintTooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+/* Уже реализовано, стили готовы к использованию через className={styles.iconHint} */ 

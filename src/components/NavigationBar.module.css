@@ -1,0 +1,83 @@
+/* NavigationBar — современная верхняя навигация */
+.navigationBar {
+  display: flex;
+  align-items: center;
+  background: var(--gradient-header);
+  height: var(--header-height);
+  box-shadow: 0 2px 8px rgba(10,37,64,0.08);
+  padding: 0 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1200;
+}
+.navList {
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navItem {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: var(--font-bold);
+  color: #fff;
+  padding: 0 8px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.navItem.active {
+  color: var(--accent-cyan);
+}
+.navItem .navUnderline {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-cyan);
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleX(0.5);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.navItem.active .navUnderline {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.chatIndicator {
+  position: relative;
+  display: inline-block;
+}
+
+.unreadBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4d4f;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+} 

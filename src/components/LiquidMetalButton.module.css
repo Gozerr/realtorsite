@@ -1,0 +1,24 @@
+/* LiquidMetalButton — премиальная кнопка */
+.liquidMetalBtn {
+  background: var(--gradient-btn);
+  background-size: 200% 200%;
+  animation: liquid-metal 2.5s linear infinite;
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-btn);
+  box-shadow: 0 2px 16px 0 var(--main-blue-20);
+  font-size: 1.1rem;
+  font-weight: var(--font-bold);
+  padding: 12px 32px;
+  cursor: var(--cursor-main);
+  transition: box-shadow 0.3s, transform 0.2s, background 0.3s;
+  outline: none;
+  position: relative;
+  z-index: 1;
+}
+.liquidMetalBtn:hover, .liquidMetalBtn:focus {
+  box-shadow: 0 4px 32px 0 var(--accent-cyan-40);
+  transform: scale(1.04);
+  background-position: 100% 50%;
+  cursor: var(--cursor-active);
+} 
