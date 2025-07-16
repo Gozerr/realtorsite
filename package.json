@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gozerr.github.io/realtorsite",
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
     "@ant-design/pro-layout": "^7.22.6",
@@ -47,9 +46,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "cypress:open": "cypress open",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -79,7 +76,6 @@
     "ajv-keywords": "^3.5.2",
     "babel-plugin-import": "^1.13.8",
     "cypress": "^14.5.0",
-    "gh-pages": "^6.1.1",
     "leaflet": "^1.9.4",
     "react-leaflet": "^4.2.1"
   },
